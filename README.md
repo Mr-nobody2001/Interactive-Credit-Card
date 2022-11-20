@@ -1,2 +1,2 @@
 # Interactive-Credit-Card
-Cartão de crédito interativo
+Um tela de cartão interativo para input e armazenamento de informações. Os campos de input possuem validação.
