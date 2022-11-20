@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Interactive Card</title>
+</head>
+
+<body>
+    <figure>
+        <img id="img1" src="bg-main-mobile.png" alt="#">
+    </figure>
+
+    <main id="principalContainer" class="container">
+        <div id="containerPrincipalImage">
+            <div id="imgCardBack">
+                <figure>
+                    <img src="bg-card-back.png" alt="Credit Card Front">
+                </figure>
+                <div id="text1">
+                    <p class="textCard">000</p>
+                </div>
+            </div>
+
+            <div id="imgCardFront">
+                <figure id="imgLogo">
+                    <img src="card-logo.svg" alt="Logo">
+                </figure>
+
+                <figure>
+                    <img src="bg-card-front.png" alt="Credit Card Back">
+                </figure>
+
+                <div id="text2">
+                    <div id="cardNumberText">
+                        <p class="mb-3 textCard">0000 0000 0000 0000</p>
+                    </div>
+
+                    <div id="nameText">
+                        <p class="text2Size textCard">Jane Appleseed</p>
+                    </div>
+
+                    <div id="expirationText">
+                        <p class="text2Size"><span class="textCard">00</span>/<span class="textCard">00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="principalFormContainer">
+           <div id="subPrincipalFormContainer">
+               <div id="formCardholderName" class="mb-3">
+                   <label for="CardholderName" class="form-label">Cardholder Name</label>
+                   <input type="text" class="form-control" placeholder="e.g. Jane Appleseed" maxlength="25">
+                   <label for="CardholderName" class="form-label alertLabel invisible">Can't be blank</label>
+               </div>
+
+               <div id="formCardNumber" class="mb-3">
+                   <label for="CardNumber" class="form-label">Card Number</label>
+                   <input type="text" class="form-control" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                   <label for="CardNumber" class="form-label alertLabel invisible">Can't be blank</label>
+               </div>
+
+               <div id="formExpirationDate" class="mb-3">
+                   <label for="ExpirationDate" class="form-label">Exp. Date (MM/YY)</label>
+                   <div id="inputDate">
+                       <input type="number" class="form-control me-2" placeholder="MM">
+                       <input type="number" class="form-control" placeholder="YY">
+                   </div>
+                   <label for="ExpirationDate" class="form-label alertLabel invisible">Can't be blank</label>
+               </div>
+
+               <div id="formCVC" class="mb-3">
+                   <label for="CVC" class="form-label">CVC</label>
+                   <input type="number" class="form-control" placeholder="e.g. 123">
+                   <label for="CVC" class="form-label alertLabel invisible">Can't be blank</label>
+               </div>
+           </div>
+
+           <div id="confirmScreen" class="invisible">
+                <figure id="confirmImg">
+                    <img src="icon-complete.svg" alt="Complete">
+                </figure>
+
+                <p id="textCofirm1">Thank you!</p>
+                <p id="textCofirm2">We've added your card details</p>
+           </div>
+
+           <div id="confirmButtonContainer">
+                <button id="confirmButton">Confirm</button>
+           </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
