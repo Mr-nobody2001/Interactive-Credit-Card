@@ -145,12 +145,15 @@ function getAndPassValue5 () {
     alertLabel[3].innerText = "Invalid";
     alertLabel[3].setAttribute("class", "form-label alertLabel visible");
     form[4].style.borderColor = "#ff0000";
+    
 
-    if (parseInt(value) > 100 && parseInt(value) < 999 || value == '') {
+    if (parseInt(value) < 999 || value == '') {
         textCard[0].innerText = value;
-        form[4].style.borderColor = "#dedddf";
-        alertLabel[3].setAttribute("class", "form-label alertLabel invisible");
 
+        if (parseInt(value) > 100){
+            form[4].style.borderColor = "#dedddf";
+        alertLabel[3].setAttribute("class", "form-label alertLabel invisible");
+        }
     }
 }
 
